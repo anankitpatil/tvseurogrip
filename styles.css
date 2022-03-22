@@ -1,0 +1,156 @@
+/* TVS Eurogrip Landing Page - Styles
+   Ankit Patil
+   ankitpatil.com */
+@font-face {
+  font-family: "Noto";
+  src: url("./fonts/noto-regular.ttf");
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("./fonts/noto-italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("./fonts/noto-bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Noto";
+  src: url("./fonts/noto-bold-italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto";
+  overflow: hidden;
+}
+
+body {
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a {
+  text-decoration: none;
+}
+
+.easeOutQuint {
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animation {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9994;
+}
+
+.animation .one {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.animation .one .we-are {
+  font-size: 2.4vw;
+  margin-bottom: 30px;
+  color: var(--blue);
+  transform: translateX(-6vw);
+  opacity: 0;
+}
+
+.animation .one.play .we-are {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.animation .one .logo {
+  width: 25vw;
+  height: auto;
+  margin: 0 auto;
+  transform: translateX(-6vw);
+  opacity: 0;
+  transition-delay: .3s;
+}
+
+.animation .one.play .logo {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.animation .one .scroll {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 90px;
+  letter-spacing: 2px;
+  color: var(--blue);
+  transform: translateX(-6vw);
+  opacity: 0;
+  transition-delay: .6s;
+}
+
+.animation .one.play .scroll {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.animation .one .down-arrow {
+  width: 18px;
+  height: auto;
+  margin: 0 auto;
+  transform: translateX(-6vw);
+  opacity: 0;
+  transition-delay: .9s;
+}
+
+.animation .one.play .down-arrow {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.animation .one .logo-overlay {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  opacity: .1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-6vw);
+  opacity: 0;
+  animation: backandforth;
+  animation-duration: 15s;
+  animation-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  animation-iteration-count: infinite;
+  transition-delay: 1.2s;
+}
+
+.animation .one.play .logo-overlay {
+  transform: translateX(0vw);
+  opacity: .1;
+}
+
+@keyframes backandforth {
+  0% {
+    transform: translateX(-10vw);
+  }
+
+  50% {
+    transform: translateX(10vw);
+  }
+
+  100% {
+    transform: translateX(-10vw);
+  }
+}
